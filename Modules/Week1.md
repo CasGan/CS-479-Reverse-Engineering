@@ -1,26 +1,33 @@
 # Week 1 - Simple Static Analysis 
 Learned about 
 
-## Executive Summary Lab 1–2
-
 Analyze the file Lab02–02.exe
 Question
 
 # Lab 1-1
 
+## Executive Summary 
+
+
 ## Indicators of Compromise
+Compilation Date: 2010-12-19 16:16:38 UTC
+
+MD5 HASH (EXE):  bb7425b82141a1c0f7d60e5106676bb1 
+
+MD5 HASH (DLL):  290934c61de9176ad682ffdd65f0a669 
+
 
 ## Mitigations 
 
 ## Evidence 
-Using www.virustotal.com
+Lab 1.1 consisted of two components, a portable executable (EXE) and a dynamically linked library (dll). By using www.Virustotal.com we can see that the .exe and .dll both set off vendors' virus classifiers. 
 
-Using PEview
-
-Using 
+By using strings with the .exe file we can see suppose activity. Some keywords that stand out is the last statement says "WARNING_THIS_WILL_DESTROY_YOUR_MACHINE". There is also "c:\windows\system32\kerne132.dll" which replaes the l with a 1. 
 
 
 # Lab 1-2 
+
+## Executive Summary 
 
 ## Indicators of Compromise
 PEview Time Date Stamp: 2011/01/19 Web 16:10:41 UTC
