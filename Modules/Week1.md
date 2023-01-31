@@ -22,8 +22,10 @@ MD5 HASH (DLL):  290934c61de9176ad682ffdd65f0a669
 ## Evidence 
 Lab 1.1 consisted of two components, a portable executable (EXE) and a dynamically linked library (dll). By using www.Virustotal.com we can see that the .exe and .dll both set off vendors' virus classifiers. 
 
-By using strings with the .exe file we can see suppose activity. Some keywords that stand out is the last statement says "WARNING_THIS_WILL_DESTROY_YOUR_MACHINE". There is also "c:\windows\system32\kerne132.dll" which replaes the l with a 1. 
+By using strings with the .exe file we can see suppose activity. Some keywords that stand out is the last statement says "WARNING_THIS_WILL_DESTROY_YOUR_MACHINE". There is also "c:\windows\system32\kerne132.dll" which replaes the l with a 1. Using this same method, the .dll shows the IP address of 127.26.152.13. 
 
+In the .dll the following functions are found using DependencyWalker: KERNEL32.DLL, WS2_32.DLL, NTDLL.DLL.
+In the .exe the following functions are found using DependencyWalker: FindClose, CreateFileA, CloseHandle.
 
 # Lab 1-2 
 
