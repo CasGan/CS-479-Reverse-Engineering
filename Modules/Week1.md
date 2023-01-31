@@ -7,7 +7,7 @@ Question
 # Lab 1-1
 
 ## Executive Summary 
-
+The .exe file can be calling the .dll. There is also network connection probably occuring to 127.26.152.13. 
 
 ## Indicators of Compromise
 Compilation Date: 2010-12-19 16:16:38 UTC
@@ -30,6 +30,7 @@ In the .exe the following functions are found using DependencyWalker: FindClose,
 # Lab 1-2 
 
 ## Executive Summary 
+This file is packed and is connecting to the internet. 
 
 ## Indicators of Compromise
 PEview Time Date Stamp: 2011/01/19 Web 16:10:41 UTC
@@ -59,3 +60,5 @@ PEview says that the size of Raw Data is 0  and the virtual size is 400 for UPX0
 ## Mitigations 
 
 ## Evidence 
+PeID shows that it is packed with UPX. The size of Raw data is 0 which can indicate that it is packed. 
+DependencyWalker shows that there are four functions : KERNEL32.DLL, ADVAPI32.DLL, MSVCRT.DLL, WINNET.DLL. With winnet having the functions InternetOpenUrlA, and InternetOpenA. 
