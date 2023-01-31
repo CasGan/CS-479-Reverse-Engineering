@@ -1,8 +1,5 @@
 # Week 1 - Simple Static Analysis 
-Learned about 
-
-Analyze the file Lab02–02.exe
-Question
+Learned how to use VirusTotal and reading the information after the scan. We also learned PEview, PeID, strings, and DependencyWalker. Checked to see if an item was packed. Learned the format of ASCII and Unicode and how to 
 
 # Lab 1-1
 
