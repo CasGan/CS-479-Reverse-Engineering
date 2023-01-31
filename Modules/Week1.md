@@ -42,6 +42,9 @@ The DLL files seen were
   CreateServiceA
   InternetOpenA
   
+Dropping it into PeID shows that ijt is a UPX 0.89.6-1.02/1.05-2.90 -> Markus & Laszlo  and
+EP Section: UPX1 
+  
 PEview says that the size of Raw Data is 0  and the virtual size is 400 for UPX0
 
 ## Mitigations 
