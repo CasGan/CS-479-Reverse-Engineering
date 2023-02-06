@@ -59,3 +59,27 @@ PEview says that the size of Raw Data is 0  and the virtual size is 400 for UPX0
 ## Evidence 
 PeID shows that it is packed with UPX. The size of Raw data is 0 which can indicate that it is packed. 
 DependencyWalker shows that there are four functions : KERNEL32.DLL, ADVAPI32.DLL, MSVCRT.DLL, WINNET.DLL. With winnet having the functions InternetOpenUrlA, and InternetOpenA. 
+
+# Lab 1-3
+
+## Executive Summary 
+
+## Indicators of Compromise
+
+
+## Mitigations 
+
+## Evidence
+
+# Lab 1-4
+
+## Executive Summary 
+
+## Indicators of Compromise
+
+
+## Mitigations 
+
+## Evidence
+
+
