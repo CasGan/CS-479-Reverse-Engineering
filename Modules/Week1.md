@@ -70,6 +70,7 @@ DependencyWalker shows that there are four functions : KERNEL32.DLL, ADVAPI32.DL
 ## Mitigations 
 
 ## Evidence
+Opening the file with PeID outputed FSG 1.0 -> dulek/xt. By going through PeView the size of raw data is 0. The rest od the data sets seem off. A quick search leads us to seeing that FSG stands for Fast Small Good which can be used to pack.  
 
 # Lab 1-4
 
