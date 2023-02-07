@@ -63,14 +63,19 @@ DependencyWalker shows that there are four functions : KERNEL32.DLL, ADVAPI32.DL
 # Lab 1-3
 
 ## Executive Summary 
+After analyzing the file it can be found that it is malicious. The contentst seem to be packed using FSG. 
 
 ## Indicators of Compromise
-
+MD5 -  9c5c27494c28ed0b14853b346b113145 
+SHA1 -  290ab6f431f46547db2628c494ce615d6061ceb8 
+First Seen In The Wild 2011-03-26 06:54:39 UTC 
 
 ## Mitigations 
 
 ## Evidence
 Opening the file with PeID outputed FSG 1.0 -> dulek/xt. By going through PeView the size of raw data is 0. The rest od the data sets seem off. A quick search leads us to seeing that FSG stands for Fast Small Good which can be used to pack.  
+Running strings lets us see three words : KERNEL32.dll, LoadLibraryA, GetProcAddress.
+These libraries can also be found to be used in Dependency Walker. 
 
 # Lab 1-4
 
