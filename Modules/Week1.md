@@ -67,7 +67,9 @@ After analyzing the file it can be found that it is malicious. The contentst see
 
 ## Indicators of Compromise
 MD5 -  9c5c27494c28ed0b14853b346b113145 
+
 SHA1 -  290ab6f431f46547db2628c494ce615d6061ceb8 
+
 First Seen In The Wild 2011-03-26 06:54:39 UTC 
 
 ## Mitigations 
@@ -80,6 +82,8 @@ VirusTotal also sets off many flags.
 Running strings lets us see three words : KERNEL32.dll, LoadLibraryA, GetProcAddress.
 These libraries can also be found to be used in Dependency Walker. 
 
+No Creation Time Stamp Date. 
+
 # Lab 1-4
 
 ## Executive Summary 
@@ -89,11 +93,15 @@ Seems to be aimed for Intel 386 or later procesessors and compatible processors.
 ## Indicators of Compromise
 MD5 625ac05fd47adc3c63700c3b30de79ab 
 
+Creation Time 2019-08-30 22:26:59 UTC 
+
 ## Mitigations 
 
 ## Evidence
 PeID shows the file uses Microsoft Visual C++. 
+
 VirusTotal sets off many flags and marks it as malicious. 
+
 The date in VirusTotal and in PeView shows to be 2019/08/30,but was first seen in the wild in 2011/07/05. 
 
 Strings shows three executables : \system32\wupdmgr.exe, \winup.exe, \system32\wupdmgrd.exe. 
@@ -117,3 +125,4 @@ Among these are also many functions being called and dlls.
   sfc_0os.dll
   ...
  to list a few. 
+DependencyWalker helps verify the usage of KERNEL32.DLL, ADVAPI32.DLL, MSVCRT.DLL
