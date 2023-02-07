@@ -73,19 +73,47 @@ First Seen In The Wild 2011-03-26 06:54:39 UTC
 ## Mitigations 
 
 ## Evidence
-Opening the file with PeID outputed FSG 1.0 -> dulek/xt. By going through PeView the size of raw data is 0. The rest od the data sets seem off. A quick search leads us to seeing that FSG stands for Fast Small Good which can be used to pack.  
+Opening the file with PeID outputed FSG 1.0 -> dulek/xt. By going through PeView the size of raw data is 0. The rest od the data sets seem off. A quick search leads us to seeing that FSG stands for Fast Small Good which can be used to pack. 
+
+VirusTotal also sets off many flags. 
+
 Running strings lets us see three words : KERNEL32.dll, LoadLibraryA, GetProcAddress.
 These libraries can also be found to be used in Dependency Walker. 
 
 # Lab 1-4
 
 ## Executive Summary 
+This file can be found to be malicious. It is probable that it is writing on a file. 
+Seems to be aimed for Intel 386 or later procesessors and compatible processors. 
 
 ## Indicators of Compromise
-
+MD5 625ac05fd47adc3c63700c3b30de79ab 
 
 ## Mitigations 
 
 ## Evidence
+PeID shows the file uses Microsoft Visual C++. 
+VirusTotal sets off many flags and marks it as malicious. 
+The date in VirusTotal and in PeView shows to be 2019/08/30,but was first seen in the wild in 2011/07/05. 
 
-
+Strings shows three executables : \system32\wupdmgr.exe, \winup.exe, \system32\wupdmgrd.exe. 
+The address http://www.practicalmalwareanalysis.com/updater.exe can also be seen. 
+Among these are also many functions being called and dlls. 
+  CloseHandle
+  OpenProcess
+  GetCurrentProcess
+  GetProcAddress
+  LoadLibraryA
+  WinExec
+  WriteFile
+  CreateFileA 
+  ... 
+  KERNEL32.dll
+  AdjustTokenPrivileges
+  LoopupPrivilegeValueA
+  OpenProcessToken
+  ADVAPI32.dll
+  MSVCRT.dll
+  sfc_0os.dll
+  ...
+ to list a few. 
