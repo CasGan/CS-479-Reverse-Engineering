@@ -6,16 +6,15 @@ Summary of week learning
 # Lab 3-1
 
 ## Executive Summary 
- ---- Most Important Takeaway ----
-
+ Lab03-01.exe has been found to be malware. Running the .exe file wil replicate itself to another file. The replicated file has network functionality. 
 
 ## Indicators of Compromise
 
----- What to look for if you're infected -----
+C:\Windows\System32\vmx32to64.exe 
+Reg Key: HKLM\Software\Microsoft\Windows\CurrentVersion\Run\VideoDriver
 
 ## Mitigations 
-
----- how you discovered anything that could be used to fix this infection ------
+Unsure of how to remove. 
 
 ## Evidence 
 ### Static Analysis
@@ -53,7 +52,7 @@ WireShark reveals queries being made to www.practicalmalwareanalysis.com.
 Comparing both shots of the regshot revealed that 6 keys had been added. : HKLM\System\ControlSet001\Services\IPRIP, HKLM\System\ControlSet001\Services\IPRIP\Parameters, HKLM\System\ControlSet001\Services\IPRIP\Security,HKLM\System\CurrentControlSet\Services\IPRIP,HKLM\System\CurrentControlSet\Services\IPRIP\Parameters, HKLM\System\CurrentControlSet\Services\IPRIP\Security. 
 Procmon shows many readfiles and RegOpenKey for PID 1080 connected to svchost.exe. 
 Many of the strings located can be seen in the comparison of the remshot. 
-Below it can be seen that the ImagePath was set to "%SystemRoom%\System32\svchost.exe -k netsvcs". As well as a DisplayName: stating "Intranet Network Awareness (INA+)".  Using the command line we can run C:\WINDOWS\system32\svhost.exe -k netsvcs after running rundll32.exe Lab03-02, Install.
+Below it can be seen that the ImagePath was set to "%SystemRoom%\System32\svchost.exe -k netsvcs". As well as a DisplayName: stating "Intranet Network Awareness (INA+)".  Using the command line we can run C:\WINDOWS\system32\svhost.exe -k netsvcs or [net start IPRIP]  after running rundll32.exe Lab03-02, InstallA.
 Wireshark shows connections leading to http://practicalmalwareanalysis.com/serve.htmll. 
 
 # Lab 3-3
