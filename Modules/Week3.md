@@ -1,8 +1,7 @@
 
 # Week 3  Basic Dynamic Analysis
 
-Summary of week learning
-
+Analysing malware after execution is Dynamic Analysis, which helps us understand what the malware is doing. In order to do this, it is important that the envirionment that the malware is being run on is secure and separated from the network(sandbox). Static Analysis is still complete first before attempting dynamic.  
 # Lab 3-1
 
 ## Executive Summary 
@@ -47,6 +46,8 @@ String: Intranet Network Awareness (INA+).
 
 Unsure of how to remove. 
 ## Evidence 
+### Static Analysis 
+File is packed and requiers deeper analysis. 
 
 ### Dynamic Analysis 
 Comparing both shots of the regshot revealed that 6 keys had been added. : HKLM\System\ControlSet001\Services\IPRIP, HKLM\System\ControlSet001\Services\IPRIP\Parameters, HKLM\System\ControlSet001\Services\IPRIP\Security,HKLM\System\CurrentControlSet\Services\IPRIP,HKLM\System\CurrentControlSet\Services\IPRIP\Parameters, HKLM\System\CurrentControlSet\Services\IPRIP\Security. 
