@@ -35,17 +35,17 @@ WireShark reveals queries being made to www.practicalmalwareanalysis.com.
 # Lab 3-2
 
 ## Executive Summary 
- ---- Most Important Takeaway ----
+ Lab03-02 has been found to be malware. Installs as a service: IPRIP. Communicates with practicalmalwareanalysis.com/serve.html. 
 
 
 ## Indicators of Compromise
 
----- What to look for if you're infected -----
-
+Reg Key: %CurrentDirectory%\Lab03-02.dll. 
+File: serve.html
+String: Intranet Network Awareness (INA+). 
 ## Mitigations 
 
----- how you discovered anything that could be used to fix this infection ------
-
+Unsure of how to remove. 
 ## Evidence 
 
 ### Dynamic Analysis 
