@@ -58,7 +58,7 @@ Wireshark shows connections leading to http://practicalmalwareanalysis.com/serve
 # Lab 3-3
 
 ## Executive Summary 
- ---- Most Important Takeaway ----
+Lab 03-03 has been found to be malware. Creates the log file : practicalmalwareanalysis.log. Found to be keylogger. 
 
 
 ## Indicators of Compromise
@@ -68,7 +68,7 @@ File: practicalmalwareanalysis.log
 
 ## Mitigations 
 
----- how you discovered anything that could be used to fix this infection ------
+Unsure of how to remove. 
 
 ## Evidence 
 ### Static Analysis
