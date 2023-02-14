@@ -63,8 +63,9 @@ Wireshark shows connections leading to http://practicalmalwareanalysis.com/serve
 
 
 ## Indicators of Compromise
+A svchost.exe file that has no parent or the parent of Lab03-03.exe. 
+File: practicalmalwareanalysis.log
 
----- What to look for if you're infected -----
 
 ## Mitigations 
 
@@ -77,7 +78,8 @@ PeID only shows kernel32.dll. And running strings does not show anything useful,
 ### Dynamic Analysis 
 When running Lab03-03 the file executed alongside with a svchost.exe. This svchost.exe was left behind after Lab3 was executed.  
 RegShot shows 6 added keys: \Software\Sysinternals\Process Explorer\ : ending with DllColumnMap, Dllcolumns, HandleColumnMap , HandleColumns, ProcessColumnMap, ProcessColumns. a DbgHelpPat: "C:\WINDOWS\system32\dbghelp.dll" was also found. 
-Strings inside Process Explorer reveals some intereting characters: practicalmalwareanalysis.log , [SHIFT],[ENTER], [BACKSPACE],BACKSPACE, [TAB], [CTRL], [DEL],and [CAPS LOCK]. These were found in the Memory. The Image revelase nothing suspicious. 
+Strings inside Process Explorer reveals some intereting characters: practicalmalwareanalysis.log , [SHIFT],[ENTER], [BACKSPACE],BACKSPACE, [TAB], [CTRL], [DEL],and [CAPS LOCK]. These were found in the Memory. The Image revelase nothing suspicious.
+Wireshark reveals a request to http://sa.windows.com/sasearch / lclsrch.smll. 
 
 Since we know the PID (1476)  of svchost.exe we'll filter for it in Wirshark. We located a WriteFile with that PID. Following the path led to the .log file that was revealed in the strings. The .log file located on the desktop revealed that it was loggint the keys that were inputted as well as stating where they were inputted.
 
