@@ -72,7 +72,12 @@ Wireshark shows connections leading to http://practicalmalwareanalysis.com/serve
 
 ## Evidence 
 ### Static Analysis
-
+PeID only shows kernel32.dll. And running strings does not show anything useful, mostly a bunch of A's. 
 
 ### Dynamic Analysis 
------ How do you find each of the above? ( the steps/work to get there ) 
+When running Lab03-03 the file executed alongside with a svchost.exe. This svchost.exe was left behind after Lab3 was executed.  
+RegShot shows 6 added keys: \Software\Sysinternals\Process Explorer\ : ending with DllColumnMap, Dllcolumns, HandleColumnMap , HandleColumns, ProcessColumnMap, ProcessColumns. a DbgHelpPat: "C:\WINDOWS\system32\dbghelp.dll" was also found. 
+Strings inside Process Explorer reveals some intereting characters: practicalmalwareanalysis.log , [SHIFT],[ENTER], [BACKSPACE],BACKSPACE, [TAB], [CTRL], [DEL],and [CAPS LOCK]. These were found in the Memory. The Image revelase nothing suspicious. 
+
+Since we know the PID (1476)  of svchost.exe we'll filter for it in Wirshark. We located a WriteFile with that PID. Following the path led to the .log file that was revealed in the strings. The .log file located on the desktop revealed that it was loggint the keys that were inputted as well as stating where they were inputted.
+
