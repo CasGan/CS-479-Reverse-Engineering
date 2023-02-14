@@ -1,7 +1,7 @@
 
-# Week 3  
+# Week 3  Basic Dynamic Analysis
 
-Learned how to use VirusTotal and reading the information after the scan. We also learned PEview, PeID, strings, and DependencyWalker. Checked to see if an item was packed. Learned the format of ASCII and Unicode and how to 
+Summary of week learning
 
 # Lab 3-1
 
@@ -36,6 +36,12 @@ Learned how to use VirusTotal and reading the information after the scan. We als
 ---- how you discovered anything that could be used to fix this infection ------
 
 ## Evidence 
+### Static Analysis
+Running strings we find suspicious strings to indicate network activity. For example, CONNECT %s:%i HTTP/1/0, www.practicalmalwareanalysis.com and kernal32.dll. Kernal32.dll also makes an appearance in DependencyWalker. 
+PeID reveals that it has been packed with PEncrypt 3.1 Final -> junkcode. 
+With a timestamp of 2008/01/06 shown by PeView. 
+
+### Dynamic Analysis 
 
 ----- How do you find each of the above? ( the steps/work to get there ) 
 
