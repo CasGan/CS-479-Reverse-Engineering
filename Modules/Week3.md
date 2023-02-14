@@ -18,6 +18,12 @@ Summary of week learning
 ---- how you discovered anything that could be used to fix this infection ------
 
 ## Evidence 
+### Static Analysis
+Running strings we find suspicious strings to indicate network activity. For example, CONNECT %s:%i HTTP/1/0, www.practicalmalwareanalysis.com and kernal32.dll. Kernal32.dll also makes an appearance in DependencyWalker. 
+PeID reveals that it has been packed with PEncrypt 3.1 Final -> junkcode. 
+With a timestamp of 2008/01/06 shown by PeView. 
+
+### Dynamic Analysis 
 
 ----- How do you find each of the above? ( the steps/work to get there ) 
 
@@ -37,9 +43,7 @@ Summary of week learning
 
 ## Evidence 
 ### Static Analysis
-Running strings we find suspicious strings to indicate network activity. For example, CONNECT %s:%i HTTP/1/0, www.practicalmalwareanalysis.com and kernal32.dll. Kernal32.dll also makes an appearance in DependencyWalker. 
-PeID reveals that it has been packed with PEncrypt 3.1 Final -> junkcode. 
-With a timestamp of 2008/01/06 shown by PeView. 
+
 
 ### Dynamic Analysis 
 
@@ -60,5 +64,8 @@ With a timestamp of 2008/01/06 shown by PeView.
 ---- how you discovered anything that could be used to fix this infection ------
 
 ## Evidence 
+### Static Analysis
 
+
+### Dynamic Analysis 
 ----- How do you find each of the above? ( the steps/work to get there ) 
