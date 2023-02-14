@@ -52,8 +52,10 @@ WireShark reveals queries being made to www.practicalmalwareanalysis.com.
 
 
 ### Dynamic Analysis 
+Comparing both shots of the regshot revealed that 6 keys had been added. : HKLM\System\ControlSet001\Services\IPRIP, HKLM\System\ControlSet001\Services\IPRIP\Parameters, HKLM\System\ControlSet001\Services\IPRIP\Security,HKLM\System\CurrentControlSet\Services\IPRIP,HKLM\System\CurrentControlSet\Services\IPRIP\Parameters, HKLM\System\CurrentControlSet\Services\IPRIP\Security. 
+Below it can be seen that the ImagePath was set to "%SystemRoom%\System32\svchost.exe -k netsvcs". As well as a DisplayName: stating "Intranet Network Awareness (INA+)". 
 
------ How do you find each of the above? ( the steps/work to get there ) 
+Procmon shows many readfiles and RegOpenKey for PID 1148 connected to svchost.exe. 
 
 # Lab 3-3
 
