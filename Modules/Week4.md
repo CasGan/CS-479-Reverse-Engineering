@@ -35,5 +35,6 @@
   ###  Why would an attacker want to control the EIP register inside a program they want to take control of?
     
   ###  What is the AL register and how does it relate to EAX?
-    
+   AL references the lower 8 bit (1 byte) of the 32 full bit EAX general register. 
+  
   ###  What is the result of the instruction `xor eax, eax` and where is it stored?
