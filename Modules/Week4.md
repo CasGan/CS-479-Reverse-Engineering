@@ -11,7 +11,8 @@
     
     
   #### - What is a stack frame?
-    
+  The stack is a datastructure where items are pushed on the stack and popped off the stack. It has a last in, first out (LIFO) strucutre. It is used for short term storage with the primary use of managing data echanges between function calls. The stack is the memory for functions, local variables, parameters, flow control, and return address. 
+  
   #### - What would you find in a data section?
   Data section is composed of static and global values that are placed when a program is loaded. 
     
