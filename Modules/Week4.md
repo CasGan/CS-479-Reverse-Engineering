@@ -49,3 +49,5 @@
   
   #### - What is the result of the instruction `xor eax, eax` and where is it stored? 
   The instruction : xor eax, eax [bitwise exclusive OR] (XOR) : is for setting the EAX register to zero. The result of zero is stord in the eax register.  
+  
+## Crackme --Ghidra
