@@ -51,6 +51,8 @@
   The instruction : xor eax, eax [bitwise exclusive OR] (XOR) : is for setting the EAX register to zero. The result of zero is stord in the eax register.  
   
 ## Crackme --Ghidra
-We begin analyzing the crackme file using ghidra in our safe environment. By opening exports we can open the main function and begin seeing what it is executing. 
+We begin analyzing the crackme file using ghidra in our safe environment. By opening exports we can open the main function and begin seeing what it is executing.
 
-There are 4 variables initialized in the beginning. Be scanning through the code we see an output asking for key to be entered. Followed by what we are assuming to be the input of the user that is stored in the variable local_14. Another variable, iVarl, is set to the function validate_kay with the user's input as the parameter (local_14). 
+There are 4 variables initialized in the beginning. Be scanning through the code we see an output asking for key to be entered. Followed by what we are assuming to be the input of the user that is stored in the variable local_14. Another variable, iVarl, is set to the function validate_kay with the user's input as the parameter (local_14). If the iVarl == 1 it out puts "Good job mate, now go keygen me.". That is our goal and not the else which is the output of "nope". 
+
+We open the function validate_kay. The return value is '0x4c7' which is the hexadecimal value of 1223. The key is then 1223 and even 0 since it is being compared to that. 
