@@ -23,7 +23,8 @@
    The code section controls what the program will do and how the tasks will be done. This is what the CPU fetches when the program is executed in order to execute them. 
    
    #### - What does the `inc` instruction do, and how many operands does it take?
-    
+   The inc  instruction increments the value of a register or memory location by 1. Thi instruction is ran by inc reg_name and therefore only has one operand. It increments the register/memory location and does not need to store the result in a separate destination operand. 
+   
    #### - If I perform a `div` instruction, where would I find the remainder of the binary division (modulo)?
    After the division of EDX and EAX by 'value' the remainder is stored in EDX. EAX gets to store the result of the division operation. To use the remainder use the operation: modulo.
    
