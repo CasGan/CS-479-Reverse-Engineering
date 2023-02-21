@@ -5,16 +5,19 @@
    ### What is the difference between machine code and assembly?
    Machine code tells the processor what to do with hexadecimal digits known as opcodes. When a high level language is compiled by a program it creates the machine code. 
    Assembly is a human-readable version of the intruction set given to the computer.  
-    Assembly langugage tends to be a reliable way to recover from machine code. Since machine code is too difficult to understand assembly is used. 
+   Assembly langugage tends to be a reliable way to recover from machine code. Since machine code is too difficult to understand assembly is used. 
     
    ### If the ESP register is pointing to memory address 0x001270A4 and I execute a `push eax` instruction, what address will ESP now be pointing to?
+    
     
   ###  What is a stack frame?
     
   ###  What would you find in a data section?
+  Data section is composed of static and global values that are placed when a program is loaded. 
     
   ###  What is the heap used for?
-    
+  The heap, also known as dynamic memory, is used for dynamic memory. It creates new values and frees the values that are no longer needed. 
+  
    ### What is in the code section of a program's virtual memory space?
     
    ### What does the `inc` instruction do, and how many operands does it take?
