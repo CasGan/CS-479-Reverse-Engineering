@@ -29,9 +29,10 @@
    After the division of EDX and EAX by 'value' the remainder is stored in EDX. EAX gets to store the result of the division operation. To use the remainder use the operation: modulo.
    
    ####  - How does `jz` decide whether to jump or not?
-    
+   The instruction jz will jump if the zf (zero flag) is equal to 1. 
+   
   ####  - How does `jne` decide whether to jump or not?
-    
+  The instruction jne will jump if the zf (zero flag) is equal to 0. 
   #### - What does a `mov` instruction do?
   The mov instruction moves data from one location to another. It can move the data into registers or the RAM. It is the instruction for reading and writing to memory. 
   
