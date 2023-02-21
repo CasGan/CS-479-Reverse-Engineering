@@ -1,7 +1,11 @@
 # Week 4 
 
 ## Questions 
+
    ### What is the difference between machine code and assembly?
+   Machine code tells the processor what to do with hexadecimal digits known as opcodes. When a high level language is compiled by a program it creates the machine code. 
+   Assembly is a human-readable version of the intruction set given to the computer.  
+    Assembly langugage tends to be a reliable way to recover from machine code. Since machine code is too difficult to understand assembly is used. 
     
    ### If the ESP register is pointing to memory address 0x001270A4 and I execute a `push eax` instruction, what address will ESP now be pointing to?
     
