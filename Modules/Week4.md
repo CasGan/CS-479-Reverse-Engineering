@@ -51,3 +51,6 @@
   The instruction : xor eax, eax [bitwise exclusive OR] (XOR) : is for setting the EAX register to zero. The result of zero is stord in the eax register.  
   
 ## Crackme --Ghidra
+We begin analyzing the crackme file using ghidra in our safe environment. By opening exports we can open the main function and begin seeing what it is executing. 
+
+There are 4 variables initialized in the beginning. Be scanning through the code we see an output asking for key to be entered. Followed by what we are assuming to be the input of the user that is stored in the variable local_14. Another variable, iVarl, is set to the function validate_kay with the user's input as the parameter (local_14). 
