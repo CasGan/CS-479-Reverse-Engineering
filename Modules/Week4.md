@@ -20,7 +20,8 @@
   The heap, also known as dynamic memory, is used for dynamic memory. It creates new values and frees the values that are no longer needed. 
   
    #### - What is in the code section of a program's virtual memory space?
-    
+   The code section controls what the program will do and how the tasks will be done. This is what the CPU fetches when the program is executed in order to execute them. 
+   
    #### - What does the `inc` instruction do, and how many operands does it take?
     
    #### - If I perform a `div` instruction, where would I find the remainder of the binary division (modulo)?
