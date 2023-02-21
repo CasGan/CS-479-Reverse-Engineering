@@ -8,10 +8,10 @@
    Assembly langugage tends to be a reliable way to recover from machine code. Since machine code is too difficult to understand assembly is used. 
     
    #### - If the ESP register is pointing to memory address 0x001270A4 and I execute a `push eax` instruction, what address will ESP now be pointing to?
-    
+   Pushing that instruction to the stack will change the stack pointer (ESP) to the memory address of 0x001270A0. This is since a the instruction pushed a 4-byte value the pointer needs to decrement to use the next location on the stack. 
     
   #### - What is a stack frame?
-  The stack is a datastructure where items are pushed on the stack and popped off the stack. It has a last in, first out (LIFO) strucutre. It is used for short term storage with the primary use of managing data echanges between function calls. The stack is the memory for functions, local variables, parameters, flow control, and return address. 
+  The stack is a datastructure where items are pushed on the stack and popped off the stack. It has a last in, first out (LIFO) strucutre. It is used for short term storage with the primary use of managing data echanges between function calls. The stack is the memory for functions, local variables, parameters, flow control, and return address. The stack pointer is ESP and it contains the memory address of the top of the stack. The base pointer is EBP which the program uses as a placeholder to track the local variables and parameters. 
   
   #### - What would you find in a data section?
   Data section is composed of static and global values that are placed when a program is loaded. 
