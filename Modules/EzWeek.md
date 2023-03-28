@@ -24,7 +24,16 @@ To learn more we run the file in strings and went through the ouput. Among the o
   To learn 
   
 # ControlFlow1
+  In order to crack Controlflow1 it had to be opened in ghidra. The sink was traced following the input. The functions observed then were Scissor, Paper, Rock. The Rules discovered where: 
+  1. 16th char need be * 
+  2. 2nd char must be 6
+  3. 1st char is A 
+  4. 8th char is ‘%’
+  5. 4th char must be 2
+  6. Pwd length must be >= 16th 
+
   
+  ### Permalink to key generator.
 https://github.com/CasGan/CS-479-Reverse-Engineering/blob/main/Modules/keygen/controlflow1/gen.py
   
 # ControlFlow2-1
