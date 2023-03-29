@@ -37,3 +37,11 @@ To learn more we run the file in strings and went through the ouput. Among the o
 https://github.com/CasGan/CS-479-Reverse-Engineering/blob/main/Modules/keygen/controlflow1/gen.py
   
 # ControlFlow2-1
+   In order to crack Controlflow1 it had to be opened in ghidra. The sink was traced following the input. The functions observed then were Scissor, Paper, Rock. The Rules discovered where: 
+  main -> rock -> paper -> scissors->lizard->spock
+  1. Pwd length must be > 16th
+  2. 11th character must be 0x2a
+  3. 13th character must be 0x36
+  4. 10th character must be 0x41
+  5. 6th character must be 'Y'
+  6. 8th character must be 0x23 
