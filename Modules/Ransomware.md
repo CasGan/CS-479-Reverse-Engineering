@@ -5,8 +5,4 @@ Inputting that string reveals it to be the password to decrypt the encryption.
 By further analysing the file we can see the function decrypt(). Which informs us that it is xor-ing each 
 char in the file by "0x34". 
 
-![ransomware1](https://user-images.githubusercontent.com/89425242/229966154-ad1bf002-6a68-4bdd-b985-7abc89213f17.png)
-
-https://github.com/CasGan/CS-479-Reverse-Engineering/issues/1#issue-1654828557
-
-
+![](Modules/Resources/ransomware1.png)
