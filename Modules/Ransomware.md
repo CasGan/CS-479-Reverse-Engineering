@@ -9,6 +9,9 @@ char in the file by "0x34".
 
 
 # rasomware2
+This file is a ransomware and has locked important files. 
+Upon executing a password is requested and a failed input prompts the user to pay the ransom. 
+Expecting this program in ghidra we find the password which is "delicious". 
 
 
 
