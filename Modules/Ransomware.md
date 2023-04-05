@@ -8,5 +8,9 @@ char in the file by "0x34".
 ![Image of Ransomware1](Modules/Resources/ransomware1.png)
 
 
+# rasomware2
+
+
+
 
 
