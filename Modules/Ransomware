@@ -6,7 +6,7 @@ By further analysing the file we can see the function decrypt(). Which informs u
 char in the file by "0x34". 
 
 
-![ERROR](url "https://github.com/CasGan/CS-479-Reverse-Engineering/tree/main/Modules/Resources")
+![ERROR](/Modules/Resources/ransomware1.png?raw=true)
 
 
 
