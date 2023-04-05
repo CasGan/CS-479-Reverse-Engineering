@@ -5,4 +5,8 @@ Inputting that string reveals it to be the password to decrypt the encryption.
 By further analysing the file we can see the function decrypt(). Which informs us that it is xor-ing each 
 char in the file by "0x34". 
 
-![](Modules/Resources/ransomware1.png)
+![Image of Ransomware1](Modules/Resources/ransomware1.png)
+
+
+
+
