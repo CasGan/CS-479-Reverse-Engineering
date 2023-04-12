@@ -21,7 +21,7 @@ key[15] !=key[10] ^ key[8] +0x30
  key[14],key[4],key[9] != 0x87
 ### rock
 must be 19 characters long 
-"""
+```
 import random
 
 def con_ran(cond, chars):
@@ -60,7 +60,7 @@ serial[16] = con_ran(lambda c: (c + serial[17]) > 170 and serial[1] + serial[2] 
 
 print(serial.decode('ascii'))
 
-"""
+```
 ## Decryptme#1 
 
 In order to run the EXE file we'll need to download wine. After executing Decryptme#1.exe a 
