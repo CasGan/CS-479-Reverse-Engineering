@@ -1,5 +1,27 @@
 # Week 5: 
 
+
+## Crackme05
+
+Going through the file in ghidra we find 4 functions that are being called: paper(), scissors(), cracker(), rock(). These functions contain statements that if true will go in and trigger a bomb. The bomb is not where we want to arrive therefore we have to get arround the conditions. 
+
+### paper
+key[10] ^ key[8] +0x30
+key[13] ^ key[5] +0x30
+
+they must be > 0x3a
+
+key[3] != key[10] ^ key[8] +0x30
+key[15] !=key[10] ^ key[8] +0x30
+### scissors
+ key[1 +2] have to be > 0xab 
+ key;17 + 16 also have to be > 0xab
+
+### cracker
+ key[14],key[4],key[9] != 0x87
+### rock
+must be 19 characters long 
+
 ## Decryptme#1 
 
 In order to run the EXE file we'll need to download wine. After executing Decryptme#1.exe a 
