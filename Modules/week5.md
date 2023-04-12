@@ -21,7 +21,46 @@ key[15] !=key[10] ^ key[8] +0x30
  key[14],key[4],key[9] != 0x87
 ### rock
 must be 19 characters long 
+"""
+import random
 
+def con_ran(cond, chars):
+    stri = ''
+    for c in chars:
+        if cond(ord(c)):
+            stri += c
+    return random.choice(stri)
+
+char_options = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY1234567890-"
+valid_chars = char_options.encode('ascii')
+serial = bytearray(random.getrandbits(8) for _ in range(19))
+
+for i in range(len(serial)):
+    if serial[i] < 0:
+        serial[i] = -serial[i]
+    serial[i] = valid_chars[serial[i] % len(valid_chars)]
+
+serial[4] = 0x2d
+serial[9] = 0x2d
+serial[14] = 0x2d
+
+serial[8] = con_ran(lambda c: (c ^ serial[10]) <= 9, char_options).encode('ascii')[0]
+serial[5] = con_ran(lambda c: (c ^ serial[13]) <= 9, char_options).encode('ascii')[0]
+
+var1 = (serial[10] ^ serial[8]) + 0x30
+var2 = (serial[13] ^ serial[5]) + 0x30
+
+serial[3] = var1
+serial[15] = var1
+serial[0] = var2
+serial[18] = var2
+
+serial[1] = con_ran(lambda c: (c + serial[2]) > 170, char_options).encode('ascii')[0]
+serial[16] = con_ran(lambda c: (c + serial[17]) > 170 and serial[1] + serial[2] != c + serial[17], char_options).encode('ascii')[0]
+
+print(serial.decode('ascii'))
+
+"""
 ## Decryptme#1 
 
 In order to run the EXE file we'll need to download wine. After executing Decryptme#1.exe a 
