@@ -61,6 +61,9 @@ serial[16] = con_ran(lambda c: (c + serial[17]) > 170 and serial[1] + serial[2] 
 print(serial.decode('ascii'))
 
 ```
+https://github.com/CasGan/CS-479-Reverse-Engineering/blob/529ed26472b71d299c85b89433edd6dcbf1a9d6f/Modules/Resources/Screenshot%20from%202023-04-12%2008-16-07.png
+
+
 ## Decryptme#1 
 
 In order to run the EXE file we'll need to download wine. After executing Decryptme#1.exe a 
