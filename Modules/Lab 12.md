@@ -4,6 +4,7 @@
 
 
 ## 2) Identify the process that will be injected into. Seeing a string in Ghidra isn't sufficient -- explain how the process gets selected.
+![image](https://user-images.githubusercontent.com/89425242/233481193-e4a12896-4269-4fe6-abfb-a2852dd14828.png)
 
 
 ## 3) Identify the entry point of the DLL injection. Where is DllMain?
