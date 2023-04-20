@@ -7,6 +7,7 @@
 
 
 ## 3) Identify the entry point of the DLL injection. Where is DllMain?
+![image](https://user-images.githubusercontent.com/89425242/233480263-f81e35df-0799-4998-b10e-b54e719e330a.png)
 
 
 ## 4) This malware does something every ______ seconds. How often, and where is the loop where that waiting happens?
