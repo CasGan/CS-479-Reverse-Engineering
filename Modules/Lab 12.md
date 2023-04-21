@@ -1,6 +1,7 @@
 # Detecting DLL Injection 
 
 ## 1) Prove that the loader is using DLL injection. (Don't forget a relevant snapshot in Ghidra.)
+![image](https://user-images.githubusercontent.com/89425242/233742308-1841444e-a6d3-4ae7-a2b1-405e91a84cd7.png)
 
 
 ## 2) Identify the process that will be injected into. Seeing a string in Ghidra isn't sufficient -- explain how the process gets selected.
