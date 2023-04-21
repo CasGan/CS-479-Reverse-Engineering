@@ -25,6 +25,6 @@ Creates a messabebox that as you to press okay in order to reboot.
 
 
 ## 5) What does the malware do every _______ seconds?
-
+it Sleeps(6000) therefore 60 seconds. 
 ![image](https://user-images.githubusercontent.com/89425242/233745352-179c2928-c488-4030-88d9-451a1adf597e.png)
 
