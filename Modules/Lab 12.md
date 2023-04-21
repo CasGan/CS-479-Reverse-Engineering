@@ -7,7 +7,7 @@ We believe the loader is using dll injection because it is passing "s_Lab-01.dll
 
 
 ## 2) Identify the process that will be injected into. Seeing a string in Ghidra isn't sufficient -- explain how the process gets selected.
-
+The process will be injected into explorere.exe
 
 ![image](https://user-images.githubusercontent.com/89425242/233481193-e4a12896-4269-4fe6-abfb-a2852dd14828.png)
 
