@@ -13,7 +13,7 @@ The process will be injected into explorere.exe
 
 
 ## 3) Identify the entry point of the DLL injection. Where is DllMain?
-
+The entry point is shown below. Where the handle is passed as well as the process to be opened which is set to bVarl. 
 
 ![image](https://user-images.githubusercontent.com/89425242/233480263-f81e35df-0799-4998-b10e-b54e719e330a.png)
 
@@ -26,5 +26,6 @@ Creates a messabebox that as you to press okay in order to reboot.
 
 ## 5) What does the malware do every _______ seconds?
 it Sleeps(6000) therefore 60 seconds. 
+
 ![image](https://user-images.githubusercontent.com/89425242/233745352-179c2928-c488-4030-88d9-451a1adf597e.png)
 
