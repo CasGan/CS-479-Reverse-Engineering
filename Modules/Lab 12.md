@@ -1,6 +1,8 @@
 # Detecting DLL Injection 
 
 ## 1) Prove that the loader is using DLL injection. (Don't forget a relevant snapshot in Ghidra.)
+We believe the loader is using dll injection because it is passing "s_Lab-01.dll". This occurs in an area where the process is being opened, a handle implemented, with allocating virtual memeory and using WriteProcessMemeory with CreateRemoteThread to write the file in. 
+
 ![image](https://user-images.githubusercontent.com/89425242/233742308-1841444e-a6d3-4ae7-a2b1-405e91a84cd7.png)
 
 
