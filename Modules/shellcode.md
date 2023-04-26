@@ -4,7 +4,7 @@
 .text
 .global _start
 _start:
-	movabsq $0x68732f6e69622f20, %rax /* move 64 bits into rax */
+	movabsq $0x68732f6e69622f2f, %rax /* move 64 bits into rax */
 	shr $8, %rax /* remove null terminators by shifting down 8 bits */
 	pushq %rax /* push the above -> stack /bin/sh\0 [1st arg] */
 	
@@ -40,11 +40,21 @@ pathname : /bin/sh	|	argv : [ /bin/sh, NULL] 	| 	envp : NULL
 
 execve id = 59 [ 0x3b ]
 
-	RAX |  0x3B
+	RAX | 0x3B
 	RDI | bin/sh_addy
 	RSI | null_addy
 	RDX | null_addy
+					
+movabsq is used to push the 64 bit 2F 2F 62 69 6e 2F 73 68 00 : "//bin/sh" and saved into the rax register. 
 
+Completing the first argument: To get rid of null termiantors we shifted 8 bits to the right using shr and push that value into rax
+
+Completing the second argument: requires filename associated w/ file, and a NULL pointer. 
+rax receives the null and rdi the filename. pointer is then moved to rsi
+
+Completing the third argument:requires the environment variables. Since we are passing nothing we also set this to a null terminator. This is dueable since rax was xorq
+
+addq is then used to put together execve and the arguments that were set up (this is found in the rax register). This will be used to execute the execve when the syscall is done. 
 
 
 # Report how many bytes total are in your assembly, and include the whole thing in ascii 
