@@ -58,5 +58,6 @@ addq is then used to put together execve and the arguments that were set up (thi
 
 
 # Report how many bytes total are in your assembly, and include the whole thing in ascii 
+![image](https://user-images.githubusercontent.com/89425242/234662767-a9b29b07-8cbc-446d-b976-502687ea6c6b.png)
 
 
