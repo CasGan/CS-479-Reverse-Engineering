@@ -61,3 +61,6 @@ addq is then used to put together execve and the arguments that were set up (thi
 ![image](https://user-images.githubusercontent.com/89425242/234662767-a9b29b07-8cbc-446d-b976-502687ea6c6b.png)
 
 
+![image](https://user-images.githubusercontent.com/89425242/234666632-9ab5092c-3aab-43b4-a70a-caeea44bb5c6.png)
+
+
