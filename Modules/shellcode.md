@@ -36,7 +36,15 @@ _start:
 # A step-by-step explanation of your assembly code and how it sets up the system call 
 To execute : execve (char *pathname, char **argv, char **envp) 
 
-pathname : /bin/sh			argv : [ /bin/sh, NULL]				envp : NULL
+pathname : /bin/sh	|	argv : [ /bin/sh, NULL] 	| 	envp : NULL
+
+execve id = 59 [ 0x3b ]
+
+	RAX |  0x3B
+	RDI | bin/sh_addy
+	RSI | null_addy
+	RDX | null_addy
+
 
 
 # Report how many bytes total are in your assembly, and include the whole thing in ascii 
