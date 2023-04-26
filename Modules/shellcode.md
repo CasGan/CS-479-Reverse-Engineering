@@ -1,5 +1,5 @@
 ## ShellCode Creation
-A code block containing your assembly instructions for your shellcode 
+# A code block containing your assembly instructions for your shellcode 
 ```
 .text
 .global _start
@@ -33,9 +33,16 @@ _start:
 ```
 
 
-A step-by-step explanation of your assembly code and how it sets up the system call 
+# A step-by-step explanation of your assembly code and how it sets up the system call 
+To execute : execve (char *pathname, char **argv, char **envp) 
+
+pathname : /bin/sh
+
+argv : [ /bin/sh, NULL]
+
+envp : NULL
 
 
-Report how many bytes total are in your assembly, and include the whole thing in ascii 
+# Report how many bytes total are in your assembly, and include the whole thing in ascii 
 
 
